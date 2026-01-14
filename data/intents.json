@@ -1,0 +1,233 @@
+{
+  "intents": [
+    {
+      "tag": "book_flight",
+      "patterns": [
+        "book a flight from chennai to delhi tomorrow",
+        "i need a flight ticket to mumbai next week",
+        "help me find a flight to bangalore tonight"
+      ],
+      "responses": ["Sure, I can help you book a flight."]
+    },
+    {
+      "tag": "cancel_flight",
+      "patterns": [
+        "cancel my flight booking",
+        "i want to cancel tonight's flight",
+        "please cancel my ticket to delhi"
+      ],
+      "responses": ["Your flight booking has been canceled."]
+    },
+    {
+      "tag": "check_flight_status",
+      "patterns": [
+        "what is the status of my flight",
+        "is my flight delayed",
+        "check the status of my flight to mumbai"
+      ],
+      "responses": ["Checking flight status for you."]
+    },
+    {
+      "tag": "book_hotel",
+      "patterns": [
+        "book a hotel room in chennai for tomorrow",
+        "i need a hotel in bangalore next weekend",
+        "find me a budget hotel in delhi"
+      ],
+      "responses": ["I can help you book a hotel."]
+    },
+    {
+      "tag": "cancel_hotel",
+      "patterns": [
+        "cancel my hotel booking",
+        "i want to cancel the room reservation",
+        "please cancel my hotel in mumbai"
+      ],
+      "responses": ["Your hotel booking has been canceled."]
+    },
+    {
+      "tag": "book_cab",
+      "patterns": [
+        "book a cab to the airport",
+        "i need a taxi from home to office",
+        "arrange a cab from chennai central to adyar"
+      ],
+      "responses": ["Booking a cab for you."]
+    },
+    {
+      "tag": "cancel_cab",
+      "patterns": [
+        "cancel my cab booking",
+        "please cancel the ride",
+        "i don't need the taxi anymore"
+      ],
+      "responses": ["Your cab booking has been canceled."]
+    },
+    {
+      "tag": "order_food",
+      "patterns": [
+        "order a pizza for me",
+        "i am hungry order biryani",
+        "get me a burger and fries tonight"
+      ],
+      "responses": ["Placing your food order."]
+    },
+    {
+      "tag": "track_food_order",
+      "patterns": [
+        "where is my food order",
+        "track my pizza order",
+        "is my biryani order on the way"
+      ],
+      "responses": ["Tracking your food order."]
+    },
+    {
+      "tag": "cancel_food_order",
+      "patterns": [
+        "cancel my food order",
+        "i don't want the pizza now",
+        "please cancel the order i just placed"
+      ],
+      "responses": ["Your food order has been canceled."]
+    },
+    {
+      "tag": "check_weather",
+      "patterns": [
+        "what is the weather in chennai",
+        "will it rain tomorrow in bangalore",
+        "tell me today's temperature in delhi"
+      ],
+      "responses": ["Fetching the weather for you."]
+    },
+    {
+      "tag": "get_news",
+      "patterns": [
+        "show me the latest news",
+        "what are today's headlines",
+        "any important news updates now"
+      ],
+      "responses": ["Here are the latest news headlines."]
+    },
+    {
+      "tag": "set_alarm",
+      "patterns": [
+        "set an alarm for 6 am tomorrow",
+        "wake me up at 7 in the morning",
+        "set an alarm for 5 30 am"
+      ],
+      "responses": ["Alarm has been set."]
+    },
+    {
+      "tag": "set_reminder",
+      "patterns": [
+        "remind me to study at 8 pm",
+        "set a reminder for my meeting tomorrow",
+        "remind me to call my friend this evening"
+      ],
+      "responses": ["Reminder has been set."]
+    },
+    {
+      "tag": "create_todo",
+      "patterns": [
+        "add buy groceries to my todo list",
+        "add finish project report to my tasks",
+        "create a task to pay electricity bill"
+      ],
+      "responses": ["Task added to your todo list."]
+    },
+    {
+      "tag": "check_todo",
+      "patterns": [
+        "show my tasks",
+        "what is on my todo list",
+        "list all my pending tasks"
+      ],
+      "responses": ["Here are your pending tasks."]
+    },
+    {
+      "tag": "check_time",
+      "patterns": [
+        "what time is it now",
+        "tell me the current time",
+        "what is the time in chennai"
+      ],
+      "responses": ["Here is the current time."]
+    },
+    {
+      "tag": "check_date",
+      "patterns": [
+        "what is today's date",
+        "tell me the date today",
+        "which day is it today"
+      ],
+      "responses": ["Here is today's date."]
+    },
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello there",
+        "good morning",
+        "hey bot"
+      ],
+      "responses": ["Hello! How can I help you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "see you later",
+        "good night",
+        "talk to you soon"
+      ],
+      "responses": ["Goodbye! Have a nice day."]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thank you",
+        "thanks a lot",
+        "that's helpful thanks",
+        "appreciate your help"
+      ],
+      "responses": ["You're welcome!"]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "what can you do",
+        "how can you help me",
+        "i need some help",
+        "show me your features"
+      ],
+      "responses": ["I can help you with flights, hotels, cabs, food orders, and more."]
+    },
+    {
+      "tag": "small_talk_how_are_you",
+      "patterns": [
+        "how are you",
+        "how is it going",
+        "how are you doing today"
+      ],
+      "responses": ["I'm good, thanks for asking!"]
+    },
+    {
+      "tag": "small_talk_who_are_you",
+      "patterns": [
+        "who are you",
+        "tell me about yourself",
+        "what are you"
+      ],
+      "responses": ["I'm your friendly NLU chatbot!"]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "random text that makes no sense",
+        "blah blah blah",
+        "i don't know what to say"
+      ],
+      "responses": ["Sorry, I didn't understand that."]
+    }
+  ]
+}
