@@ -51,9 +51,6 @@ nlu_chatbot/
 │
 └── README.md
 
-yaml
-Copy code
-
 ---
 
 ## ⚙️ Setup Instructions
