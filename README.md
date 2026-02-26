@@ -1,122 +1,98 @@
-# NLU Chatbot with Local LLM (Ollama)
+# NLP Chatbot with Local LLM (Ollama) 🤖🧠
 
-## 📌 Project Overview
-This project is an **NLU-based chatbot system** that combines:
-- **Intent Classification** using a custom NLU model
-- **Local LLM inference** using **Ollama**
-- **Interactive UI** built with **Streamlit**
+📌 **Project Overview**  
+This is a locally hosted NLP chatbot system that uses a **custom NLU model** for intent classification and a **local LLM via Ollama** for context-aware responses. The project has a **Python backend** for NLU/LLM processing and a **React frontend** for an interactive chat interface.
 
-The system first identifies the **user’s intent**, then generates a **context-aware response** using a locally hosted LLM.
+It runs completely offline—no external API keys are required.
 
 ---
 
-## 🧠 Architecture
-User Input  
-→ Intent Classifier (NLU)  
-→ Intent-aware Prompt  
-→ Ollama (Local LLM)  
-→ Response Display (Streamlit)
+## 🧩 Architecture
 
----
+```text
+User Input (Frontend)
+       ↓
+Intent Classifier (Python NLU)
+       ↓
+Intent-aware Prompt
+       ↓
+Ollama Local LLM
+       ↓
+Response Display (Frontend)
+🚀 Features
 
-## 🚀 Features
-- Intent classification using labeled intent dataset
-- Local LLM inference (no cloud API)
-- Streamlit-based interactive dashboard
-- Evaluation using test dataset
-- Modular and extensible design
+Intent classification using labeled datasets
 
----
+Local LLM inference (offline, secure, no cloud API)
 
-## 🛠️ Tech Stack
-- Python 3.10+
-- Streamlit
-- Ollama
-- Scikit-learn
-- JSON-based datasets
+Interactive React frontend for chatting with the bot
 
----
+Modular design for adding new intents or LLM logic
 
-## 📂 Project Structure
-nlu_chatbot/
+Easy evaluation of intent classification accuracy
+
+🛠️ Tech Stack
+
+Frontend: React, Vite, HTML, CSS, JavaScript
+
+Backend: Python 3.10+, Streamlit (optional), Ollama, Scikit-learn
+
+Database: JSON-based datasets (intents.json, eval_dataset.json)
+
+Version Control: Git & GitHub
+
+📂 Project Structure
+nlp-chatbot/
 │
-├── app.py # Streamlit UI
-├── llm_nlu.py # NLU + LLM logic
-├── ollama_client.py # Ollama interface
-├── evaluate.py # Model evaluation
-├── requirements.txt
-├── data/
-│ ├── intents.json
-│ ├── eval_dataset.json
+├── backend/
+│   ├── main.py              # Main backend entry
+│   ├── requirements.txt     # Python dependencies
+│   ├── nlu/                 # Custom NLU model logic
+│   ├── services/            # Additional backend services
+│   └── venv/                # Python virtual environment
+│
+├── frontend/
+│   ├── src/                 # React source code
+│   ├── public/              # Static files
+│   ├── index.html           # Main HTML
+│   ├── package.json         # Node dependencies
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   └── README.md
 │
 └── README.md
-
----
-
-## ⚙️ Setup Instructions
-
-### 1️⃣ Create Virtual Environment
-```bash
-python -m venv venv
-venv\Scripts\activate
-2️⃣ Install Dependencies
-bash
-Copy code
+⚙️ Setup Instructions
+1️⃣ Backend Setup
+cd backend
+python -m venv venv          # Create virtual environment
+venv\Scripts\activate        # Activate (Windows)
+# or source venv/bin/activate  # macOS/Linux
 pip install -r requirements.txt
-3️⃣ Start Ollama
-bash
-Copy code
-ollama serve
-Ensure at least one model is available:
 
-bash
-Copy code
-ollama list
-▶️ Run the Application
-bash
-Copy code
-streamlit run app.py
+Start backend server (example):
+
+python main.py
+2️⃣ Frontend Setup
+cd frontend
+npm install                  # Install Node dependencies
+npm run dev                  # Start React frontend
+
+Open your browser at http://localhost:5173 (default Vite port) to interact with the bot.
+
 🧪 Evaluation
-Run evaluation script to test intent classification accuracy:
 
-bash
-Copy code
-python evaluate.py
-📊 Output
-Predicted intent
+Evaluate NLU intent classification using your test dataset.
 
-Intent-aware LLM response
+Backend will provide predicted intents and LLM responses.
 
-Evaluation metrics (accuracy, confusion matrix)
+Metrics include accuracy and optional confusion matrix (if implemented).
 
 🔮 Future Improvements
+
 Multi-intent handling
 
-Context memory across conversations
+Conversation context memory across messages
 
-Model fine-tuning
+Fine-tuning the LLM locally for domain-specific intents
 
-Deployment using Docker
-
-👤 Author
-Archana
-
-📝 Notes
-This project runs entirely locally
-
-No external API keys required
-
-Designed for academic evaluation and demonstration
-
-yaml
-Copy code
-
----
-
-## What to do now (no excuses)
-1. Save this as `README.md` inside `nlu_chatbot`
-2. Run:
-```bat
-git add README.md
-git commit -m "Add project README"
-git push
+Docker-based deployment for easy sharing
